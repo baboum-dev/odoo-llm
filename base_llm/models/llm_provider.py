@@ -42,16 +42,17 @@ class LLMProvider(models.Model):
         """Reset model when provider type changes."""
         self.model_id = False
 
-    @api.model
-    def create(self, vals):
-        if vals.get("is_default"):
-            self.search(
-                [
-                    ("is_default", "=", True),
-                    ("company_id", "=", vals.get("company_id", self.env.company.id)),
-                ]
-            ).write({"is_default": False})
-        return super().create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get("is_default"):
+                self.search(
+                    [
+                        ("is_default", "=", True),
+                        ("company_id", "=", vals.get("company_id", self.env.company.id)),
+                    ]
+                ).write({"is_default": False})
+        return super().create(vals_list)
 
     def write(self, vals):
         if vals.get("is_default"):
