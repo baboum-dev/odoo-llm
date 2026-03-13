@@ -12,6 +12,7 @@
     "depends": ["base", "base_llm"],
     "data": [
         "data/openrouter_llm_model_data.xml",
+        "views/openrouter_llm_provider_views.xml",
     ],
     "external_dependencies": {
         "python": ["groq"],

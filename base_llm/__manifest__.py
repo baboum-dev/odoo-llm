@@ -1,6 +1,6 @@
 {
     "name": "Base LLM",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Technical",
     "summary": "Base module for LLM service integration",
     "description": """
