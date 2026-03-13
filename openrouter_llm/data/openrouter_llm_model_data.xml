@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- openrouter Models -->
+        <record id="llm_model_openrouter_gpt4" model="llm.model">
+            <field name="name">GPT-4</field>
+            <field name="technical_name">openai/gpt-4</field>
+            <field name="provider_type">openrouter</field>
+            <field name="context_length">8192</field>
+            <field name="description">GPT-4 model with 8192 context window</field>
+            <field name="sequence">10</field>
+        </record>
+
+    </data>
+</odoo>

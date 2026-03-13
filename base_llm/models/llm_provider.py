@@ -14,7 +14,6 @@ class LLMProvider(models.Model):
         [
             ("groq", "Groq"),
             ("openai", "OpenAI"),
-            ("openrouter", "OpenRouter"),
         ],
         string="Provider Type",
         required=True,
