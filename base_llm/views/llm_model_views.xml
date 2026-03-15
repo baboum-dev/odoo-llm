@@ -52,11 +52,8 @@
                 <field name="name"/>
                 <field name="technical_name"/>
                 <field name="provider_type"/>
-                <separator/>
                 <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
-                <group expand="0" string="Group By">
-                    <filter string="Provider Type" name="provider_type" context="{'group_by': 'provider_type'}"/>
-                </group>
+                <filter string="Group by Provider" name="group_by_provider_type" context="{'group_by': 'provider_type'}"/>
             </search>
         </field>
     </record>
