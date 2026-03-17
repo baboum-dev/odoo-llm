@@ -5,14 +5,16 @@
         <field name="model">llm.provider</field>
         <field name="inherit_id" ref="base_llm.view_llm_provider_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='model_id']" position="after">
-                <button
-                    name="action_sync_openrouter_models"
-                    type="object"
-                    string="Sync OpenRouter Models"
-                    class="oe_link"
-                    invisible="provider_type != 'openrouter'"
-                />
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button
+                        name="action_sync_openrouter_models"
+                        type="object"
+                        string="Sync OpenRouter Models"
+                        class="oe_highlight"
+                        invisible="provider_type != 'openrouter'"
+                    />
+                </header>
             </xpath>
         </field>
     </record>
